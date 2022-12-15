@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 from django.urls import reverse_lazy
+from django.contrib.auth import authenticate,login
 
 from django.views.generic import(
     CreateView
@@ -36,6 +37,10 @@ class Login(FormView):
     success_url=reverse_lazy('home_app:index')
     
     def form_valid(self, form):
-        
+        user=authenticate(
+            username=form.cleaned_data['username'],
+            password=form.cleaned_data['password']
+        )
+        login(self.request, user)
         return super(Login, self).form_valid(form)
     
