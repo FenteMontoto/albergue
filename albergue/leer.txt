@@ -1,0 +1,3 @@
+Para enviar correos al usuario de confirmación de registro
+Modificar la linea 43 "email_remitente" de las views de users
+De momento comento el bloque entero de la línea 41 a la 45

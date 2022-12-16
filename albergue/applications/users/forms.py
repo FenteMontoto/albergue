@@ -72,3 +72,35 @@ class LoginForm(forms.Form):
         
         return self.cleaned_data
         
+class UpdatePasswordForm(forms.Form):
+    
+    password1=forms.CharField(
+        label='Contraseña',
+        required=True,
+        widget=forms.PasswordInput(
+            attrs={
+                'placeholder':'Contraseña actual'
+            }
+        )
+    )
+    password2=forms.CharField(
+        label='Contraseña',
+        required=True,
+        widget=forms.PasswordInput(
+            attrs={
+                'placeholder':'Contraseña nueva'
+            }
+        )
+    )
+    password3=forms.CharField(
+        label='Contraseña',
+        required=True,
+        widget=forms.PasswordInput(
+            attrs={
+                'placeholder':'Confirma contraseña nueva'
+            }
+        )
+    )
+    def clean_password3(self):
+        if self.cleaned_data['password2']!=self.cleaned_data['password3']:
+            self.add_error('password3','Las contraseñas introducidas no son iguales')

@@ -131,3 +131,12 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+# EMAIL SETTINGS. Meter estos datos en un secret json
+
+EMAIL_USE_TLS=True
+EMAIL_HOST='smtp.mail.yahoo.com'
+EMAIL_HOST_USER='juanfente@yahoo.es'
+EMAIL_HOST_PASSWORD='pwdhdxujgdwjhafw'
+MAIL_PORT=25
