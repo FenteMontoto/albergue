@@ -10,7 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import json
+import os
 from pathlib import Path
+from django.core.exceptions import ImproperlyConfigured
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +23,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-zyc^^pv1i*tbyey9k&69faq37640720qlto=@7uahbr*s2oy#0"
+with open("secret.json") as f:
+    secret=json.loads(f.read())
+    
+def get_secret(secret_name,secrets=secret):
+    try:
+        return secrets[secret_name]  
+    except:
+        msg="La variable %s no existe" % secret_name
+        raise ImproperlyConfigured(msg)
+    
+# SECRET_KEY = "django-insecure-zyc^^pv1i*tbyey9k&69faq37640720qlto=@7uahbr*s2oy#0"
+
+SECRET_KEY=get_secret("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -87,9 +102,9 @@ DATABASES = {
         # "ENGINE": "django.db.backends.sqlite3",
         # "NAME": BASE_DIR / "db.sqlite3",
         'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'db_gestion_albergue',
-            'USER': 'root',
-            'PASSWORD': '',
+            'NAME': get_secret("DB_NAME"),
+            'USER': get_secret("USER"),
+            'PASSWORD': get_secret("PASSWORD"),
             'HOST': 'localhost',
             'PORT': '3306',
     }
