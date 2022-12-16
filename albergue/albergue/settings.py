@@ -152,6 +152,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 EMAIL_USE_TLS=True
 EMAIL_HOST='smtp.mail.yahoo.com'
-EMAIL_HOST_USER='juanfente@yahoo.es'
-EMAIL_HOST_PASSWORD='pwdhdxujgdwjhafw'
+EMAIL_HOST_USER=get_secret("EMAIL")
+EMAIL_HOST_PASSWORD=get_secret("PASS_EMAIL")
 MAIL_PORT=25
