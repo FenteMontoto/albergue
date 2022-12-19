@@ -99,7 +99,7 @@
                             display: flex;
                             align-items: center;
                             transition: .2s ease all;
-                            /* padding: 5%; */
+                            padding: 5%;
                         }
                         
                         .opciones .contenido-opcion {
@@ -109,7 +109,8 @@
                         .contenido-opcion img {
                             width: 24px;
                             height: 24px;
-                            margin-right: 10%;
+                            margin-right: 5%;
+                            margin-left: 5%;
                         }
                         
                         .opciones .contenido-opcion:hover {

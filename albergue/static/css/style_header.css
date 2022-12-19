@@ -1,5 +1,35 @@
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    #nav {
+        display: block;
+        padding-left: 2%;
+    }
+    
+    #nav li {
+        list-style: none;
+        padding-top: 1%;
+    }
+    
+    #nav li:hover {
+        list-style: none;
+        color: white;
+        background: #213f8f;
+        width: 15%;
+    }
+    
+    #nav li a:hover {
+        list-style: none;
+        color: white;
+        background: #213f8f;
+        text-decoration: none;
+    }
+    
+    #nav.active {
+        display: none;
+        animation: fadeIn .3s forwards;
+        list-style: none;
+    }

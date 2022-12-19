@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-19 17:02+0100\n"
+"POT-Creation-Date: 2022-12-19 16:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,30 +16,29 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
 #: .\applications\users\models.py:12
 msgid "Masculino"
-msgstr "Male"
+msgstr "Masculino"
 
 #: .\applications\users\models.py:13
 msgid "Femenino"
-msgstr "Female"
+msgstr "Fêmea"
 
 #: .\applications\users\models.py:14
 msgid "Otro"
-msgstr "Other"
+msgstr "Outro"
 
 #: .\applications\users\models.py:19
 msgid "Nombre"
-msgstr "Name"
+msgstr "Nome"
 
 #: .\applications\users\models.py:32
 msgid "Usuario"
-msgstr "User"
+msgstr "Usuário"
 
 #: .\applications\users\models.py:33
 msgid "Usuarios"
-msgstr "Users"
+msgstr "usuários"
 
 #: .\templates\base.html:21
 msgid "Inicio"
@@ -47,15 +46,15 @@ msgstr "Home"
 
 #: .\templates\base.html:22
 msgid "Bienvenido"
-msgstr "Welcome"
+msgstr "Bem-vindo"
 
 #: .\templates\base.html:29
 msgid "Selecciona tu idioma"
-msgstr "Select language"
+msgstr "Selecione o idioma"
 
 #: .\templates\base.html:39
 msgid "España"
-msgstr "Spain"
+msgstr "Espanha"
 
 #: .\templates\base.html:48
 msgid "Portugal"
@@ -63,30 +62,28 @@ msgstr "Portugal"
 
 #: .\templates\base.html:57
 msgid "Francia"
-msgstr "France"
+msgstr "França"
 
 #: .\templates\base.html:66
 msgid "Italia"
-msgstr "Italy"
+msgstr "Itália"
 
 #: .\templates\base.html:82
 msgid "Cerrar sesión"
-msgstr "Log out"
+msgstr "Fechar Sessão"
 
 #: .\templates\base.html:84
 msgid "Login"
-msgstr "Log in"
+msgstr "Login"
 
 #: .\templates\base.html:87
 msgid "Registro"
-msgstr "Register"
+msgstr "Registrar"
 
 #: .\templates\base.html:90
 msgid "Cambiar contraseña"
-msgstr "Change password"
+msgstr "Mudar senha"
 
 #: .\templates\base.html:98
-#, fuzzy
-#| msgid "Cambiar contraseña"
 msgid "Cambiar lenguaje"
-msgstr "Change password"
+msgstr "Mudar idioma"

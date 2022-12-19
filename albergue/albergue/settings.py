@@ -150,6 +150,9 @@ USE_TZ = True
 LANGUAGES=[
     ('es',('Español')),
     ('en',('English')),
+    ('it',('Italiano')),
+    ('pt',('Portugés')),
+    ('fr',('Francés')),
 ]
 
 # PARLER_LANGUAGES={
