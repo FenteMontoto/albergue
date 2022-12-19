@@ -1,0 +1,8 @@
+django-admin-interface
+django-ckeditor
+edx-organizations
+# mysqlclient a través de pip install mysqlcient
+# mysqlclient a través de pip install djangorestframework
+# pip install python-gettext
+# pip install django-parler
+# pip install django-rosetta

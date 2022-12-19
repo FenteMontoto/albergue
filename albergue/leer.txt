@@ -3,3 +3,15 @@ Modificar la linea 43 "email_remitente" de las views de users
 De momento comento el bloque entero de la línea 41 a la 45
 
 Oculto datos de acceso a BBDD y en secret.json con el apoyo de gitignore
+
+Para internacionalizacion hacer así!!
+descargar https://mega.nz/file/tqghUaoK#qZGphX6ER3H4gCwyrSXe2YZK3mtshpwalpzsD3LS-4E
+y seguir instrucciones de 
+https://www.youtube.com/watch?v=RxFAs8SV9rU
+
+
+desde el cmd hacer para cada idioma manage.py makemessages -l en
+y después escribimos en terminal
+manage.py compilemessages
+
+Recuerda estar situado en la ruta del manage.py

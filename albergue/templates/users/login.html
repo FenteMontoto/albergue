@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% load static %} {% block title %}Login {% endblock title %}{% block contenido %}
+{% extends "base.html" %} {% load static %}{% load i18n %} {% block title %} {% endblock title %}{% block contenido %}
 <h1>Login</h1>
 <form action="" method="post">
     {% csrf_token %} {{ form.as_p }}

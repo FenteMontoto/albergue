@@ -52,11 +52,14 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # "lang",
     
     #apps de terceros
     'ckeditor',
     'admin_interface',
     'colorfield',
+    'parler',
+    'rosetta',
     
     # Local apps
     'applications.users',
@@ -66,6 +69,8 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    # Para internacionalización
+    "django.middleware.locale.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -86,6 +91,8 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                # También para internacionalización
+                "django.template.context_processors.i18n",
             ],
         },
     },
@@ -128,19 +135,46 @@ AUTH_USER_MODEL='users.User'
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = "es-eu"
+# LANGUAGE_CODE = "es-eu"
+LANGUAGE_CODE = "es"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Europe/Madrid"
 
 USE_I18N = True
 
+# Para internacionalización usar USE_L10N
+USE_L10N=True
+
 USE_TZ = True
 
+LANGUAGES=[
+    ('es',('Español')),
+    ('en',('English')),
+]
 
+# PARLER_LANGUAGES={
+#     None:(
+#         # {'code':'es'},
+#         {'code':'en'},
+#     ),
+#     'default':{
+#         'fallback':'en',
+#         'hide_untranslated':True,
+#     }
+# }
+
+# PARLER_DEFAULT_LANGUAGE='en'
+# PARLER_SHOW_EXCLUDED_LAGUAGE_TABS=False
+
+
+LOCALE_PATHS = [
+   os.path.join(BASE_DIR, 'locale')
+]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "/static/"
+STATICFILES_DIRS=(os.path.join(BASE_DIR,'static'),)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
