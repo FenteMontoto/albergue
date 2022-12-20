@@ -150,11 +150,11 @@ USE_TZ = True
 LANGUAGES=[
     ('es',('Español')),
     ('en',('English')),
-    ('it',('Italiano')),
-    ('pt',('Portugés')),
-    ('fr',('Francés')),
-    ('de',('Alemán')),
-    ('de',('Alemán')),
+    ('it',('Italiana')),
+    ('pt',('Portoghese')),
+    ('fr',('Française')),
+    ('de',('Deutsch')),
+    ('es',('Español')),
 ]
 
 PARLER_LANGUAGES={
@@ -165,11 +165,11 @@ PARLER_LANGUAGES={
         {'code':'pt'},
         {'code':'fr'},
         {'code':'de'},
-        {'code':'de'},
+        {'code':'es'},
     ),
     'default':{
         'fallback':'es',
-        'hide_untranslated':False,
+        'hide_untranslated':True,
     }
 }
 

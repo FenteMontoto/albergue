@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-18 11:12+0100\n"
+"POT-Creation-Date: 2022-12-20 19:06+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,26 +40,66 @@ msgstr "User"
 msgid "Usuarios"
 msgstr "Users"
 
-#: .\templates\base.html:13
+#: .\leer.txt:39
+msgid "Traducir"
+msgstr ""
+
+#: .\templates\base.html:21
 msgid "Inicio"
 msgstr "Home"
 
-#: .\templates\base.html:14
+#: .\templates\base.html:22
 msgid "Bienvenido"
 msgstr "Welcome"
 
-#: .\templates\base.html:18
+#: .\templates\base.html:24
+#, fuzzy
+#| msgid "Cambiar contraseña"
+msgid "Cambiar idioma"
+msgstr "Change password"
+
+#: .\templates\base.html:45
+msgid "Selecciona tu idioma"
+msgstr ""
+
+#: .\templates\base.html:55
+msgid "España"
+msgstr ""
+
+#: .\templates\base.html:64
+msgid "Portugal"
+msgstr ""
+
+#: .\templates\base.html:73
+msgid "Francia"
+msgstr "France"
+
+#: .\templates\base.html:82
+msgid "Italia"
+msgstr "Italy"
+
+#: .\templates\base.html:98
 msgid "Cerrar sesión"
 msgstr "Log out"
 
-#: .\templates\base.html:20
+#: .\templates\base.html:100
 msgid "Login"
 msgstr "Log in"
 
-#: .\templates\base.html:23
+#: .\templates\base.html:103
 msgid "Registro"
 msgstr "Create account"
 
-#: .\templates\base.html:26
+#: .\templates\base.html:106
 msgid "Cambiar contraseña"
+msgstr "Change password"
+
+#: .\templates\base.html:110
+msgid "Prueba español"
+msgstr ""
+
+#: .\templates\base.html:114
+#, fuzzy
+#| msgid "Cambiar contraseña"
+msgid "Cambiar lenguaje"
 msgstr "Change password"

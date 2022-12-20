@@ -3,6 +3,7 @@ const opciones = document.querySelector('#opciones');
 const contenidoSelect = document.querySelector('#select .contenido-select');
 const hiddenInput = document.querySelector('#inputSelect')
 
+
 document.querySelectorAll('#opciones > .opcion').forEach((opcion) => {
     opcion.addEventListener('click', (e) => {
         e.preventDefault();

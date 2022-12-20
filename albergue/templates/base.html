@@ -20,25 +20,27 @@
         </div>
         <h1>{% trans 'Inicio' %}</h1>
         <h2> {% trans 'Bienvenido' %} {{user}}</h2>
+        <fieldset>
+            <legend>{% trans 'Cambiar idioma' %}</legend>
 
-        <h2>{% trans 'Cambiar idioma' %}</h2>
-        <form action="/i18n/setlang/" method="post">
-            {% csrf_token %}
-            <div style="display:inline;"></div>
-            <select name="language" onchange="javascript:form.submit()">
+            <form action="/i18n/setlang/" method="post">
+
+                {% csrf_token %}
+                <div style="display:inline;"></div>
+                <select name="language" onchange="javascript:form.submit()">
                 {% for lang in LANGUAGES %}
                 <option value="{{ lang.0 }}" {% if LANGUAGE_CODE %} selected="selected" {% endif %}>
                     {{ lang.1}}
                 </option>
                 {% endfor %}
             </select>
-        </form>
-
+            </form>
+        </fieldset>
         <!-- <div id="select_language">
             <form action="/i18n/setlang/" method="post">
                 {% csrf_token %}
                 <div class="selectbox">
-                    <div class="select " id="select">
+                    <div class="select" id="select">
                         <div class="contenido-select">
                             <h1 class="titulo">{% trans 'Selecciona tu idioma' %}</h1>
 
@@ -51,7 +53,7 @@
                                 <img src="{% static 'imagenes/icons8-spain-48.png' %}" alt="Spain">
                                 <div class="textos">
                                     <h2 class="titulo">{% trans 'España' %}</h2>
-                                    <p class="descripcion">ES</p>
+                                    <p class="descripcion">es</p>
                                 </div>
                             </div>
                         </a>
@@ -60,7 +62,7 @@
                                 <img src="{% static 'imagenes/icons8-portugal-48.png' %}" alt="Portugal">
                                 <div class="textos ">
                                     <h2 class="titulo">{% trans 'Portugal' %}</h2>
-                                    <p class="descripcion">PT</p>
+                                    <p class="descripcion">pt</p>
                                 </div>
                             </div>
                         </a>
@@ -69,7 +71,7 @@
                                 <img src="{% static 'imagenes/icons8-france-48.png' %}" alt="France ">
                                 <div class="textos">
                                     <h2 class="titulo">{% trans 'Francia' %}</h2>
-                                    <p class="descripcion">FR</p>
+                                    <p class="descripcion">fr</p>
                                 </div>
                             </div>
                         </a>
@@ -78,39 +80,41 @@
                                 <img src="{% static 'imagenes/icons8-italy-48.png' %}" alt="Italy">
                                 <div class="textos">
                                     <h2 class="titulo">{% trans 'Italia' %}</h2>
-                                    <p class="descripcion">IT</p>
+                                    <p class="descripcion">it</p>
                                 </div>
                             </div>
                         </a>
                     </div>
                 </div>
-                <input type="hidden" name="pais" id="inputSelect" value="{{ lang.0 }}">
+                <input type="hidden" name="pais" id="inputSelect" value=""> <button type="submit">cambiar</button>
             </form>
-        </div>
+        </div> -->
 
-    </div> -->
+    </div>
 
-        <div id="nav" class="active">
-            <ul>
-                <li>
-                    <a href="{% url 'users_app:logout' %}">{% trans 'Cerrar sesión' %}</a></li>
-                <li>
-                    <a href="{% url 'users_app:login' %}">{% trans 'Login' %}</a>
-                </li>
-                <li>
-                    <a href="{% url 'users_app:registro' %}">{% trans 'Registro' %}</a>
-                </li>
-                <li>
-                    <a href="{% url 'users_app:update' %}">{% trans 'Cambiar contraseña' %}</a>
-                </li>
-            </ul>
-        </div>
+    <div id="nav" class="active">
+        <ul>
+            <li>
+                <a href="{% url 'users_app:logout' %}">{% trans 'Cerrar sesión' %}</a></li>
+            <li>
+                <a href="{% url 'users_app:login' %}">{% trans 'Login' %}</a>
+            </li>
+            <li>
+                <a href="{% url 'users_app:registro' %}">{% trans 'Registro' %}</a>
+            </li>
+            {% if request.user.is_authenticated %}
+            <li>
+                <a href="{% url 'users_app:update' %}">{% trans 'Cambiar contraseña' %}</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+    <h1>{% trans 'Prueba español' %}</h1>
 
-
-        <div id="main">
-            {% block contenido %} {% endblock contenido %}
-            <!-- {% trans 'Cambiar lenguaje' %} -->
-            <!-- <form action="/i18n/setlang/ " method="post " style="display:inline; ">
+    <div id="main">
+        {% block contenido %} {% endblock contenido %}
+        <!-- {% trans 'Cambiar lenguaje' %} -->
+        <!-- <form action="/i18n/setlang/ " method="post " style="display:inline; ">
             {% csrf_token %}
             <div style="display:inline; ">
                 <select name="langage " id=" ">
@@ -121,8 +125,8 @@
                 </select>
                 <hr> -->
 
-        </div>
-        <!-- </form> -->
+    </div>
+    <!-- </form> -->
 
     </div>
     <script src="{% static 'js/select_languages.js' %}"></script>
