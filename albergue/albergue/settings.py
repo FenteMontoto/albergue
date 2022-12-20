@@ -153,21 +153,26 @@ LANGUAGES=[
     ('it',('Italiano')),
     ('pt',('Portugés')),
     ('fr',('Francés')),
+    ('de',('Alemán')),
 ]
 
-# PARLER_LANGUAGES={
-#     None:(
-#         # {'code':'es'},
-#         {'code':'en'},
-#     ),
-#     'default':{
-#         'fallback':'en',
-#         'hide_untranslated':True,
-#     }
-# }
+PARLER_LANGUAGES={
+    None:(
+        {'code':'es'},
+        {'code':'en'},
+        {'code':'it'},
+        {'code':'pt'},
+        {'code':'fr'},
+        {'code':'de'},
+    ),
+    'default':{
+        'fallback':'es',
+        'hide_untranslated':False,
+    }
+}
 
-# PARLER_DEFAULT_LANGUAGE='en'
-# PARLER_SHOW_EXCLUDED_LAGUAGE_TABS=False
+PARLER_DEFAULT_LANGUAGE='es'
+PARLER_SHOW_EXCLUDED_LAGUAGE_TABS=False
 
 
 LOCALE_PATHS = [

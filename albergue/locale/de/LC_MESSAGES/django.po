@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-20 18:01+0100\n"
+"POT-Creation-Date: 2022-12-20 17:58+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,57 +16,53 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
 #: .\applications\users\models.py:12
 msgid "Masculino"
-msgstr "Male"
+msgstr "Männlich"
 
 #: .\applications\users\models.py:13
 msgid "Femenino"
-msgstr "Female"
+msgstr "Weiblich"
 
 #: .\applications\users\models.py:14
 msgid "Otro"
-msgstr "Other"
+msgstr "Andere"
 
 #: .\applications\users\models.py:19
 msgid "Nombre"
 msgstr "Name"
 
-
 #: .\applications\users\models.py:32
 msgid "Usuario"
-msgstr "User"
+msgstr "Benutzer"
 
 #: .\applications\users\models.py:33
 msgid "Usuarios"
-msgstr "Users"
+msgstr "Benutzer"
 
 #: .\leer.txt:39
 msgid "Traducir"
-msgstr ""
+msgstr "Übersetzen"
 
 #: .\templates\base.html:21
 msgid "Inicio"
-msgstr "Home"
+msgstr "Startseite"
 
 #: .\templates\base.html:22
 msgid "Bienvenido"
-msgstr "Welcome"
+msgstr "Herzlich willkommen"
 
 #: .\templates\base.html:24
-#, fuzzy
-#| msgid "Cambiar contraseña"
 msgid "Cambiar idioma"
-msgstr "Change language"
+msgstr "Sprache ändern"
 
 #: .\templates\base.html:40
 msgid "Selecciona tu idioma"
-msgstr "Select language"
+msgstr "Wähle deine Sprache"
 
 #: .\templates\base.html:50
 msgid "España"
-msgstr "Spain"
+msgstr "Spanien"
 
 #: .\templates\base.html:59
 msgid "Portugal"
@@ -74,30 +70,28 @@ msgstr "Portugal"
 
 #: .\templates\base.html:68
 msgid "Francia"
-msgstr "France"
+msgstr "Frankreich"
 
 #: .\templates\base.html:77
 msgid "Italia"
-msgstr "Italy"
+msgstr "Italien"
 
 #: .\templates\base.html:93
 msgid "Cerrar sesión"
-msgstr "Log out"
+msgstr "Abmelden"
 
 #: .\templates\base.html:95
 msgid "Login"
-msgstr "Log in"
+msgstr ""
 
 #: .\templates\base.html:98
 msgid "Registro"
-msgstr "Register"
+msgstr "Registrieren"
 
 #: .\templates\base.html:101
 msgid "Cambiar contraseña"
-msgstr "Change password"
+msgstr "Passwort ändern"
 
 #: .\templates\base.html:109
-#, fuzzy
-#| msgid "Cambiar contraseña"
 msgid "Cambiar lenguaje"
-msgstr "Change password"
+msgstr "Sprache ändern"

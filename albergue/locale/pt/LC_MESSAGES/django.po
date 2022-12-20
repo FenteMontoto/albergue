@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-19 16:52+0100\n"
+"POT-Creation-Date: 2022-12-20 17:57+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: .\applications\users\models.py:12
 msgid "Masculino"
 msgstr "Masculino"
@@ -40,6 +41,10 @@ msgstr "Usuário"
 msgid "Usuarios"
 msgstr "usuários"
 
+#: .\leer.txt:39
+msgid "Traducir"
+msgstr ""
+
 #: .\templates\base.html:21
 msgid "Inicio"
 msgstr "Home"
@@ -48,42 +53,48 @@ msgstr "Home"
 msgid "Bienvenido"
 msgstr "Bem-vindo"
 
-#: .\templates\base.html:29
+#: .\templates\base.html:24
+#, fuzzy
+#| msgid "Cambiar contraseña"
+msgid "Cambiar idioma"
+msgstr "Mudar senha"
+
+#: .\templates\base.html:40
 msgid "Selecciona tu idioma"
 msgstr "Selecione o idioma"
 
-#: .\templates\base.html:39
+#: .\templates\base.html:50
 msgid "España"
 msgstr "Espanha"
 
-#: .\templates\base.html:48
+#: .\templates\base.html:59
 msgid "Portugal"
 msgstr "Portugal"
 
-#: .\templates\base.html:57
+#: .\templates\base.html:68
 msgid "Francia"
 msgstr "França"
 
-#: .\templates\base.html:66
+#: .\templates\base.html:77
 msgid "Italia"
 msgstr "Itália"
 
-#: .\templates\base.html:82
+#: .\templates\base.html:93
 msgid "Cerrar sesión"
 msgstr "Fechar Sessão"
 
-#: .\templates\base.html:84
+#: .\templates\base.html:95
 msgid "Login"
 msgstr "Login"
 
-#: .\templates\base.html:87
+#: .\templates\base.html:98
 msgid "Registro"
 msgstr "Registrar"
 
-#: .\templates\base.html:90
+#: .\templates\base.html:101
 msgid "Cambiar contraseña"
 msgstr "Mudar senha"
 
-#: .\templates\base.html:98
+#: .\templates\base.html:109
 msgid "Cambiar lenguaje"
 msgstr "Mudar idioma"
