@@ -27,7 +27,10 @@
             <div style="display:inline;"></div>
             <select name="language" onchange="javascript:form.submit()">
                 {% for lang in LANGUAGES %}
-                <option value="{{ lang.0 }}">{{ lang.0}}</option>{% endfor %}
+                <option value="{{ lang.0 }}" {% if LANGUAGE_CODE %} selected="selected" {% endif %}>
+                    {{ lang.1}}
+                </option>
+                {% endfor %}
             </select>
         </form>
 

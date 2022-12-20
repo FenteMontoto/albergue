@@ -154,6 +154,7 @@ LANGUAGES=[
     ('pt',('Portugés')),
     ('fr',('Francés')),
     ('de',('Alemán')),
+    ('de',('Alemán')),
 ]
 
 PARLER_LANGUAGES={
@@ -163,6 +164,7 @@ PARLER_LANGUAGES={
         {'code':'it'},
         {'code':'pt'},
         {'code':'fr'},
+        {'code':'de'},
         {'code':'de'},
     ),
     'default':{
