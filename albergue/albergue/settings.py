@@ -108,6 +108,7 @@ DATABASES = {
     "default": {
         # "ENGINE": "django.db.backends.sqlite3",
         # "NAME": BASE_DIR / "db.sqlite3",
+        # "SET sql_mode='STRICT_TRANS_TABLES'"
         'ENGINE': 'django.db.backends.mysql',
             'NAME': get_secret("DB_NAME"),
             'USER': get_secret("USER"),
@@ -199,3 +200,9 @@ EMAIL_HOST='smtp.mail.yahoo.com'
 EMAIL_HOST_USER=get_secret("EMAIL")
 EMAIL_HOST_PASSWORD=get_secret("PASS_EMAIL")
 MAIL_PORT=25
+
+
+# Configuración de gestión de ficheros y su ruta
+
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
