@@ -1,6 +1,6 @@
-{% extends "base.html" %} {% load static %} {% load i18n %}{% block title %}Actualizar password {% endblock title %}{% block contenido %}
+{% extends "base.html" %} {% load static %} {% load i18n %}{% block title %}Actualizar password {% endblock title %} {% block extra_css %}{% endblock extra_css%}{% block contenido %}
 <h1>Modificar contraseña:{{user}}</h1>
 <form action="" method="post">
     {% csrf_token %} {{form.as_p}}
     <button type="submit">Actualizar password</button>
-</form>{% endblock contenido %}
+</form>{% block extra_js %}{% endblock extra_js %}{% endblock contenido %}

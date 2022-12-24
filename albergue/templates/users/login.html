@@ -1,7 +1,7 @@
-{% extends "base.html" %} {% load static %}{% load i18n %} {% block title %} {% endblock title %}{% block contenido %}
+{% extends "base.html" %} {% load static %}{% load i18n %} {% block title %} {% endblock title %} {% block extra_css %}{% endblock extra_css%}{% block contenido %}
 <h1>Login</h1>
 <form action="" method="post">
     {% csrf_token %} {{ form.as_p }}
     <button type="submit">Entrar</button>
     <button><a style="text-decoration:none;" href="{% url 'users_app:registro' %}">Registrar</a></button>
-</form> {% endblock contenido %}
+</form> {% block extra_js %}{% endblock extra_js %}{% endblock contenido %}

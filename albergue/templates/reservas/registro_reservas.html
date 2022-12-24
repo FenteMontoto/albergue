@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% load static %} {% load i18n %}{% block title %}Reservas {% endblock title %}{% block contenido %}
+{% extends "base.html" %} {% load static %} {% load i18n %}{% block title %}Reservas {% endblock title %} {% block extra_css %}{% endblock extra_css%}{% block contenido %}
 
 <h2>Reservas</h2>
 <form action="POST">
@@ -8,4 +8,4 @@
     <input type="submit" value="Reservar">
 </form>
 <h2>{{user.username}}</h2>
-<h2>{{user.email}}</h2>{% endblock contenido %}
+<h2>{{user.email}}</h2>{% block extra_js %}{% endblock extra_js %}{% endblock contenido %}
