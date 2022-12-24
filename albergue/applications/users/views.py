@@ -92,3 +92,7 @@ class UpdatePasswordView(LoginRequiredMixin,FormView):
             
         logout(self.request)
         return super(UpdatePasswordView, self).form_valid(form)
+    
+    
+
+    

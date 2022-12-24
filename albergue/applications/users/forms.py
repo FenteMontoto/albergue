@@ -104,3 +104,4 @@ class UpdatePasswordForm(forms.Form):
     def clean_password3(self):
         if self.cleaned_data['password2']!=self.cleaned_data['password3']:
             self.add_error('password3','Las contraseñas introducidas no son iguales')
+            

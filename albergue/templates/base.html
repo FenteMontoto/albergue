@@ -10,6 +10,7 @@
     <link href="{% static 'css/select_languages.css' %}" rel="stylesheet">
     <link href="{% static 'css/style_header.css' %}" rel="stylesheet">
     <title>{% block title %} {% endblock title %}</title>
+    {% block extra_css %}{% endblock extra_css%}
 </head>
 
 <body>
@@ -36,59 +37,6 @@
             </select>
             </form>
         </fieldset>
-        <!-- <div id="select_language">
-            <form action="/i18n/setlang/" method="post">
-                {% csrf_token %}
-                <div class="selectbox">
-                    <div class="select" id="select">
-                        <div class="contenido-select">
-                            <h1 class="titulo">{% trans 'Selecciona tu idioma' %}</h1>
-
-                        </div>
-                        <img src="{% static 'imagenes/icons8-flecha-ampliar-30.png' %}" alt="show languages">
-                    </div>
-                    <div class="opciones" id="opciones">
-                        <a href="#" class="opcion">
-                            <div class="contenido-opcion">
-                                <img src="{% static 'imagenes/icons8-spain-48.png' %}" alt="Spain">
-                                <div class="textos">
-                                    <h2 class="titulo">{% trans 'España' %}</h2>
-                                    <p class="descripcion">es</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="opcion">
-                            <div class="contenido-opcion">
-                                <img src="{% static 'imagenes/icons8-portugal-48.png' %}" alt="Portugal">
-                                <div class="textos ">
-                                    <h2 class="titulo">{% trans 'Portugal' %}</h2>
-                                    <p class="descripcion">pt</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="opcion">
-                            <div class="contenido-opcion">
-                                <img src="{% static 'imagenes/icons8-france-48.png' %}" alt="France ">
-                                <div class="textos">
-                                    <h2 class="titulo">{% trans 'Francia' %}</h2>
-                                    <p class="descripcion">fr</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="opcion">
-                            <div class="contenido-opcion">
-                                <img src="{% static 'imagenes/icons8-italy-48.png' %}" alt="Italy">
-                                <div class="textos">
-                                    <h2 class="titulo">{% trans 'Italia' %}</h2>
-                                    <p class="descripcion">it</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <input type="hidden" name="pais" id="inputSelect" value=""> <button type="submit">cambiar</button>
-            </form>
-        </div> -->
 
     </div>
 
@@ -106,6 +54,9 @@
             <li>
                 <a href="{% url 'users_app:update' %}">{% trans 'Cambiar contraseña' %}</a>
             </li>
+            <li>
+                <a href="{% url 'reservas_app:registro_reservas' %}">{% trans 'Registrar reserva' %}</a>
+            </li>
             {% endif %}
         </ul>
     </div>
@@ -113,24 +64,12 @@
 
     <div id="main">
         {% block contenido %} {% endblock contenido %}
-        <!-- {% trans 'Cambiar lenguaje' %} -->
-        <!-- <form action="/i18n/setlang/ " method="post " style="display:inline; ">
-            {% csrf_token %}
-            <div style="display:inline; ">
-                <select name="langage " id=" ">
-                    
-                    <option value="en "selected="selected ">Inglés</option>
-                    <option value="es "selected="selected ">Español</option>
-                    
-                </select>
-                <hr> -->
 
-    </div>
-    <!-- </form> -->
 
     </div>
     <script src="{% static 'js/select_languages.js' %}"></script>
     <script src="{% static 'js/menu.js' %}"></script>
+    {% block extra_js %}{% endblock extra_js %}
 </body>
 
 </html>

@@ -38,3 +38,60 @@ pruebas
         {% endfor %}
     </select> <input type="submit" value="{% trans 'Traducir' %}">
 </form>
+
+
+Formulario con banderas
+
+<!-- <div id="select_language">
+            <form action="/i18n/setlang/" method="post">
+                {% csrf_token %}
+                <div class="selectbox">
+                    <div class="select" id="select">
+                        <div class="contenido-select">
+                            <h1 class="titulo">{% trans 'Selecciona tu idioma' %}</h1>
+
+                        </div>
+                        <img src="{% static 'imagenes/icons8-flecha-ampliar-30.png' %}" alt="show languages">
+                    </div>
+                    <div class="opciones" id="opciones">
+                        <a href="#" class="opcion">
+                            <div class="contenido-opcion">
+                                <img src="{% static 'imagenes/icons8-spain-48.png' %}" alt="Spain">
+                                <div class="textos">
+                                    <h2 class="titulo">{% trans 'España' %}</h2>
+                                    <p class="descripcion">es</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="opcion">
+                            <div class="contenido-opcion">
+                                <img src="{% static 'imagenes/icons8-portugal-48.png' %}" alt="Portugal">
+                                <div class="textos ">
+                                    <h2 class="titulo">{% trans 'Portugal' %}</h2>
+                                    <p class="descripcion">pt</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="opcion">
+                            <div class="contenido-opcion">
+                                <img src="{% static 'imagenes/icons8-france-48.png' %}" alt="France ">
+                                <div class="textos">
+                                    <h2 class="titulo">{% trans 'Francia' %}</h2>
+                                    <p class="descripcion">fr</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="opcion">
+                            <div class="contenido-opcion">
+                                <img src="{% static 'imagenes/icons8-italy-48.png' %}" alt="Italy">
+                                <div class="textos">
+                                    <h2 class="titulo">{% trans 'Italia' %}</h2>
+                                    <p class="descripcion">it</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <input type="hidden" name="pais" id="inputSelect" value=""> <button type="submit">cambiar</button>
+            </form>
+        </div> -->
