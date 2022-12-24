@@ -20,8 +20,10 @@ from .models import Reserva
 
 from .forms import ReservaRegisterForm
 
-
-    
+class ListarReservasView(ListView):
+    template_name='reservas/listar_reservas.html'
+    queryset=['a']
+   
     
 class ReservaRegisterView(CreateView):
    
