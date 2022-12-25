@@ -14,7 +14,7 @@ document.querySelectorAll('#opciones > .opcion').forEach((opcion) => {
     })
 });
 
-select.addEventListener('click', () => {
+select.addEventListener('change', () => {
     select.classList.toggle('active');
     opciones.classList.toggle('active');
 })

@@ -21,8 +21,13 @@ from .models import Reserva
 from .forms import ReservaRegisterForm
 
 class ListarReservasView(ListView):
+    model=Reserva
     template_name='reservas/listar_reservas.html'
-    queryset=['a']
+    
+    def get_queryset(self):
+        queryset=self.model.objects.all()
+        for query in queryset:
+            print(query)
    
     
 class ReservaRegisterView(CreateView):

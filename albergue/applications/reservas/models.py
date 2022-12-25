@@ -9,7 +9,7 @@ class Reserva(models.Model):
     num_reserva = models.AutoField(_('Reserva nº'),primary_key=True)
     nombre_usuario=models.ForeignKey(User,related_name='+',blank=True,null=True,on_delete=models.CASCADE)
     mail_usuario=models.ForeignKey(User,related_name='+',blank=True,null=True,on_delete=models.CASCADE)
-    camas_reservadas = models.IntegerField(_('Nº de camas a reservar'),default=1)
+    camas_reservadas = models.IntegerField(_('Nº de camas reservadas'),default=1)
     fecha_reserva_entrada = models.DateField(_('Fecha de entrada'), auto_now=False, auto_now_add=False,blank=True,null=True)
     pago_confirmado = models.BooleanField(_('Pago confirmado'),default=False)
     documentos = models.ImageField(_('Documentación'), upload_to='media/', height_field=None, width_field=None, max_length=None,blank=True,null=True)
@@ -25,4 +25,6 @@ class Reserva(models.Model):
     # def __str__(self):
     #     return str(self.documentos)
     
- 
+    def save(self,*args,**kwargs):
+        self.fecha_reserva_entrada=self.fecha_reserva_entrada
+        super().save(*args,*kwargs)
