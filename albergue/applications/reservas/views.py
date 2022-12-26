@@ -19,15 +19,15 @@ from django.views.generic.edit import(
 from .models import Reserva
 
 from .forms import ReservaRegisterForm
+from django.db.models import Sum,Count
 
-class ListarReservasView(ListView):
-    model=Reserva
-    template_name='reservas/listar_reservas.html'
-    
-    def get_queryset(self):
-        queryset=self.model.objects.all()
-        for query in queryset:
-            print(query)
+# class ListarReservasView(ListView):
+#     model=Reserva
+#     template_name='reservas/listar_reservas.html'
+#     # queryset=Reserva.objects.aggregate(reservas=Sum('camas_reservadas'))
+#     # # context_object_name='queryset'
+#     context_object_name='lista_prueba'  
+   
    
     
 class ReservaRegisterView(CreateView):
@@ -37,8 +37,8 @@ class ReservaRegisterView(CreateView):
     success_url="/"
     
    
-
-    
+def listar(request):
+    return render(request,'reservas/listar_reservas.html')
    
    
       

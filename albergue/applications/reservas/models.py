@@ -25,6 +25,5 @@ class Reserva(models.Model):
     # def __str__(self):
     #     return str(self.documentos)
     
-    def save(self,*args,**kwargs):
-        self.fecha_reserva_entrada=self.fecha_reserva_entrada
-        super().save(*args,*kwargs)
+
+    
