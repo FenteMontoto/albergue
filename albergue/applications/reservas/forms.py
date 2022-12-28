@@ -13,4 +13,12 @@ class ReservaRegisterForm(forms.ModelForm):
             'fecha_reserva_entrada',
             'documentos',
                 )
-      
+        widgets={
+            'fecha_reserva_entrada':forms.DateInput(
+                format=('%d-%m-%Y'),
+                attrs={
+                    'type':'date'
+                }
+                
+            )
+        }

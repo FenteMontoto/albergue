@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% load static %} {% load i18n %}{% block title %}Reservas {% endblock title %} {% block extra_css %}{% endblock extra_css%}{% block contenido %}
 
 <h2>Reservas</h2>
-<form action="POST">
+<form method="POST">
     {% csrf_token %} {{ form.as_p }}
     <input type="hidden" value="{{user.username}}">
     <input type="hidden" value="{{user.email}}">
