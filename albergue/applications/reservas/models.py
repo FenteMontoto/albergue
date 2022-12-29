@@ -20,6 +20,7 @@ class Reserva(models.Model):
         verbose_name=_('Reserva')
         verbose_name_plural=_('Reservas')
         ordering=['num_reserva']
+        db_table='reserva'
     
     REQUIRED_FIELDS=['camas_reservadas','fecha_reserva_entrada','documentos']
     # def __str__(self):

@@ -21,6 +21,7 @@ from .models import Reserva
 from .forms import ReservaRegisterForm
 from django.db.models import Sum,Count
 from django.http import JsonResponse
+from applications.reservas.models import Reserva
 
 
 # class ListarReservasView(ListView):
@@ -42,26 +43,38 @@ class ReservaRegisterView(CreateView):
 def listar(request):
     return render(request,'reservas/listar_reservas.html')
    
-def prueba(request):
-    all_events=Reserva.objects.all()
-    context={
+
+    
+# def all_events(request):                                                                                                 
+#     all_events = Reserva.objects.raw('SELECT num_reserva,fecha_reserva_entrada, (7-SUM(camas_reservadas))as camas_reservadas  from reservas_reserva group by fecha_reserva_entrada')
+#     # print(all_events)
+#     camas=0    
+#     out=[]                                                                                                        
+#     for event in all_events:                                                                                             
+                                                                                                     
+#         out.append({    
+#             'title': event.camas_reservadas,                                                                                                                                                                              
+#             'start': event.fecha_reserva_entrada,                                                                                                                     
+#         })                                                                                                               
+                                                                                                                      
+#     return JsonResponse(out, safe=False) 
+
+def prueba(request):  
+    all_events = Reserva.objects.all()
+    context = {
         "events":all_events,
     }
     return render(request,'reservas/prueba.html',context)
-    
-      
-    
+ 
 def all_events(request):                                                                                                 
-    all_events = Reserva.objects.raw('SELECT num_reserva,fecha_reserva_entrada, (7-SUM(camas_reservadas))as camas_reservadas  from reservas_reserva group by fecha_reserva_entrada')
-    # print(all_events)
-    camas=0    
-    out=[]                                                                                                        
+    all_events = Reserva.objects.raw('SELECT num_reserva,fecha_reserva_entrada, (7-SUM(camas_reservadas))as camas_reservadas  from reserva group by fecha_reserva_entrada')                                                                                   
+    out = []                                                                                                             
     for event in all_events:                                                                                             
-                                                                                                     
-        out.append({    
-            'title': event.camas_reservadas,   
-            'id': event.camas_disponibles,                                                                                                                                                                            
-            'start': event.fecha_reserva_entrada,                                                                                                                     
+        out.append({                                                                                                     
+            'title': event.camas_reservadas,                                                                                         
+            'id': event.camas_disponibles,                                                                                              
+            'start': event.fecha_reserva_entrada,                                                       
+            # 'end': event.fecha_reserva_entrada.strftime("%m/%d/%Y"),                                                         
         })                                                                                                               
                                                                                                                       
-    return JsonResponse(out, safe=False) 
+    return JsonResponse(out, safe=False)

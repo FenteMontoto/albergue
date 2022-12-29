@@ -75,7 +75,19 @@
     </div>
     <script src="{% static 'js/select_languages.js' %}"></script>
     <script src="{% static 'js/menu.js' %}"></script>
+    <script>
+        $(document).ready(function() {
+            var calendar = $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
 
+                },
+                events: '/all_events',
+            });
+        });
+    </script>
     {% block extra_js %}{% endblock extra_js %}
 
 </body>
