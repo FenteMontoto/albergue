@@ -41,7 +41,11 @@ class ReservaRegisterView(CreateView):
     
    
 def listar(request):
-    return render(request,'reservas/listar_reservas.html')
+    all_events = Reserva.objects.all()
+    context = {
+        "events":all_events,
+    }
+    return render(request,'reservas/listar_reservas.html',context)
    
 
     
@@ -67,11 +71,12 @@ def prueba(request):
     return render(request,'reservas/prueba.html',context)
  
 def all_events(request):                                                                                                 
-    all_events = Reserva.objects.raw('SELECT num_reserva,fecha_reserva_entrada, (7-SUM(camas_reservadas))as camas_reservadas  from reserva group by fecha_reserva_entrada')                                                                                   
+    # all_events = Reserva.objects.raw('SELECT num_reserva,fecha_reserva_entrada, (7-SUM(camas_reservadas))as camas_reservadas  from reserva group by fecha_reserva_entrada')     
+    all_events = Reserva.objects.raw('SELECT num_reserva,fecha_reserva_entrada, SUM(camas_reservadas) as camas_reservadas  from reserva group by fecha_reserva_entrada')                                                                                   
     out = []                                                                                                             
     for event in all_events:                                                                                             
         out.append({                                                                                                     
-            'title': event.camas_reservadas,                                                                                         
+            'title': (str(event.camas_reservadas)+" camas reservadas"),                                                                                         
             'id': event.camas_disponibles,                                                                                              
             'start': event.fecha_reserva_entrada,                                                       
             # 'end': event.fecha_reserva_entrada.strftime("%m/%d/%Y"),                                                         
