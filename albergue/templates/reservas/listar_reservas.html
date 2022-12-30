@@ -2,13 +2,42 @@
 
 
 <h2>Listado de Reservas</h2>
-<div id="calendar" class="container card" style="padding:20px; text-align:center; color:white;"></div>
+<div id="calendar" class="container card" style="padding:20px;"></div>
 <h2>{{user.username}}</h2>
 <h2>{{user.email}}</h2> {{lista_prueba}}
-<h2>{{ suma }}</h2>{% block extra_js %} {% endblock extra_js %}
-<style>
-    .prueba {
-        background-color: black;
+<h2>{{ suma }}</h2>{% block extra_js %}
+
+
+<script>
+    function mostrarLengua() {
+        var lista = document.cookie.split(";");
+        for (let i = 0; i < lista.length; i++) {
+            division = lista[i].indexOf('=');
+            nombreCookie = lista[i].substring(0, division).replace(" ", "");
+            valorCookie = lista[i].substring(division + 1)
+            if (nombreCookie == 'django_language') {
+                lenguaje = valorCookie
+            }
+        }
+        return valorCookie
+
     }
-</style>
-{% endblock contenido %}
+    mostrarLengua();
+    $(document).ready(function() {
+        var calendar = $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+
+            },
+            locale: mostrarLengua(),
+            eventColor: 'green',
+            eventTextColor: 'white',
+            events: '/all_events',
+        });
+
+    });
+</script>
+
+{% endblock extra_js %}{% endblock contenido %}
