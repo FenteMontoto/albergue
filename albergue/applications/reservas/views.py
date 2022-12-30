@@ -4,6 +4,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy, reverse
 # from django.contrib.auth import authenticate,login,logout
 from django.http import HttpResponseRedirect
+from django.utils.translation import gettext_lazy as _
 
 
 from django.views.generic import(
@@ -76,7 +77,7 @@ def all_events(request):
     out = []                                                                                                             
     for event in all_events:                                                                                             
         out.append({                                                                                                     
-            'title': (str(event.camas_reservadas)+" camas reservadas"),                                                                                         
+            'title': (str(event.camas_reservadas)+_(" camas reservadas")),                                                                                         
             'id': event.camas_disponibles,                                                                                              
             'start': event.fecha_reserva_entrada,                                                       
             # 'end': event.fecha_reserva_entrada.strftime("%m/%d/%Y"),                                                         
