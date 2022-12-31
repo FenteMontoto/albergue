@@ -5,7 +5,5 @@ menu.addEventListener('click', () => {
 })
 
 
-const calendario = document.querySelector('#calendar')
-    // var hijo = calendario.querySelector('.fc-view-container')
-
-console.log(calendario);
+const calendario = document.querySelector('.fc-view-container')
+console.log(calendario)
