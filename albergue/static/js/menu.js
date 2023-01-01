@@ -5,5 +5,9 @@ menu.addEventListener('click', () => {
 })
 
 
-const calendario = document.querySelector('.fc-view-container')
-console.log(calendario)
+const calendario = document.querySelectorAll('.fc-past')
+for (let i = 0; i < calendario.length; i++) {
+
+    console.log(calendario[i]);
+
+}

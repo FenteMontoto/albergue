@@ -1708,7 +1708,7 @@ be a descendant of the grid when it is being dragged.
 
 /* nuevas modificaciones css */
 
-.fc-past::before {
-    background-color: red;
+.fc-past {
+    background-color: orange !important;
     content: 'no seleccionable';
 }
