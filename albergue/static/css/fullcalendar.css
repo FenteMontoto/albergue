@@ -1708,7 +1708,27 @@ be a descendant of the grid when it is being dragged.
 
 /* nuevas modificaciones css */
 
-.fc-past {
+.fc-past::after {
     background-color: orange !important;
-    content: 'no seleccionable';
+    content: 'FINALIZADO';
+    font-size: 70%;
+}
+
+.fc-past {
+    background-image: url("../imagenes/tachado2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0%;
+}
+
+.fc-past {
+    background-color: yellowgreen;
+}
+
+.fc-day:not(span,
+.fc-past,
+.fc-title,
+fc-day>a>.fc-content>.fc-title)::before {
+    background-color: green;
+    content: "De 7 plazas:"!important;
 }

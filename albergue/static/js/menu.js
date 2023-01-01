@@ -5,9 +5,6 @@ menu.addEventListener('click', () => {
 })
 
 
-const calendario = document.querySelectorAll('.fc-past')
-for (let i = 0; i < calendario.length; i++) {
+var links = document.getElementsByClassName('fc-event-container')
 
-    console.log(calendario[i]);
-
-}
+console.log(links)
