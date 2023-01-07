@@ -64,6 +64,9 @@
             <li>
                 <a href="{% url 'users_app:registro' %}">{% trans 'Registro' %}</a>
             </li>
+            <li>
+                <a href="{% url 'reservas_app:listar_reservas' %}">{% trans 'Mostrar disponbilidad' %}</a>
+            </li>
             {% if request.user.is_authenticated %}
             <li>
                 <a href="{% url 'users_app:update' %}">{% trans 'Cambiar contraseña' %}</a>
